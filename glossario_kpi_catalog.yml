@@ -1,0 +1,35 @@
+version: 1
+source: DataHub
+owners:
+  users:
+    - telepass
+url: "https://github.com/datahub-project/datahub/"
+nodes:
+  - name: KPI_Catalog
+    description: Prova di KPI Catalog con le categorie 
+	source_url: "https://telepass.atlassian.net/wiki/spaces/DAM/pages/2724069398/UCV+-+Documentazione+Funzionale#Analisi-funzionale"
+      groups:
+        - finance
+	  owners:
+		- owner di prova
+    terms:
+      - name: Anagrafica clienti
+        description: Il KPI in questione contiene informazioni di natura anagrafica
+      - name: Info contrattuali
+        description: prova
+      - name: Info comportamentali
+        description: prova
+      - name: Analisi predittive
+        description: prova
+      - name: Info digitali
+        description: prova
+      - name: Customer Care
+        description: prova
+      - name: Info assicurative
+        description: prova
+      - name: Campaign responsiveness
+        description: prova			
+  - name: KPI_AssistenzaStradale
+    description: Lo creo vuoto solo da esempio
+  - name: KPI_Qlik
+    description: Lo creo vuoto solo da esempio    
