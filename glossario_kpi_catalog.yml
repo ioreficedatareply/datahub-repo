@@ -3,7 +3,7 @@ source: DataHub
 owners:
   users:
     - telepass
-url: "https://github.com/datahub-project/datahub/"
+url: "https://telepass.atlassian.net/wiki/spaces/DAM/pages/2674622691/DATA+PLATFORM"
 nodes:
   - name: KPI_Catalog
     description: Prova di KPI Catalog con le categorie 
@@ -16,7 +16,7 @@ nodes:
       - label: Link alla documentazione UCV 
         url: "https://telepass.atlassian.net/wiki/spaces/DAM/pages/2724069398/UCV+-+Documentazione+Funzionale#Analisi-funzionale"
     terms:
-      - name: AnagraficaCienti
+      - name: AnagraficaClienti
         description: Il KPI in questione contiene informazioni di natura anagrafica
         related_terms:
           - KPI_Catalog.InfoContrattuali
@@ -37,17 +37,16 @@ nodes:
         source_url: "https://spec.edmcouncil.org/fibo/ontology/FBC/ProductsAndServices/ClientsAndAccounts/Account"
       - name: CampaignResponsiveness
         description: prova
+  - name: KPI_AssistenzaStradale
+      description: aggiungo vuoto
+      term_source: "EXTERNAL"
+      source_ref: FIBO
+      knowledge_links:
+        - url: "https://telepass.atlassian.net/wiki/spaces/DAM/pages/2625896464/RA+-+ROADSIDE+ASSISTANCE"
+          label: Link alla documentazione Assistenza Stradale
 
-      - name: KPI_AssistenzaStradale
-        description: aggiungo vuoto
-        term_source: "EXTERNAL"
-        source_ref: FIBO
-        knowledge_links:
-          - url: "https://telepass.atlassian.net/wiki/spaces/DAM/pages/2625896464/RA+-+ROADSIDE+ASSISTANCE"
-            label: Link alla documentazione Assistenza Stradale
-
-      - name: KPI_Qlik
-        description: aggiungo vuoto
-        knowledge_links:
-          - url: "https://telepass.atlassian.net/wiki/spaces/DAM/pages/2673869372/BI+ANALYTICS"
-            label: Link alla docu di BI
+  - name: KPI_Qlik
+     description: aggiungo vuoto
+     knowledge_links:
+        - url: "https://telepass.atlassian.net/wiki/spaces/DAM/pages/2673869372/BI+ANALYTICS"
+          label: Link alla docu di BI
