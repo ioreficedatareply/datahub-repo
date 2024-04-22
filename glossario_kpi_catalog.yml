@@ -7,31 +7,47 @@ url: "https://github.com/datahub-project/datahub/"
 nodes:
   - name: KPI_Catalog
     description: Prova di KPI Catalog con le categorie 
-    knowledge_links:
-      - label: Link alla docu di UCV
-        url: "https://telepass.atlassian.net/wiki/spaces/DAM/pages/2724069398/UCV+-+Documentazione+Funzionale#Analisi-funzionale"
-    groups:
-      - finance
     owners:
-      - owner di prova
+      users:
+        - telepass_dataplatform
+      groups:
+        - Data Engineer team
+    knowledge_links:
+      - label: Link alla documentazione UCV 
+        url: "https://telepass.atlassian.net/wiki/spaces/DAM/pages/2724069398/UCV+-+Documentazione+Funzionale#Analisi-funzionale"
     terms:
-      - name: Anagrafica clienti
+      - name: AnagraficaCienti
         description: Il KPI in questione contiene informazioni di natura anagrafica
-      - name: Info contrattuali
+        related_terms:
+          - KPI_Catalog.InfoContrattuali
+      - name: InfoContrattuali
         description: prova
-      - name: Info comportamentali
+      - name: InfoComportamentali
         description: prova
-      - name: Analisi predittive
+      - name: AnalisiPredittive
         description: prova
-      - name: Info digitali
+      - name: InfoDigitali
         description: prova
-      - name: Customer Care
+      - name: CustomerCare
         description: prova
-      - name: Info assicurative
+      - name: InfoAssicurative
         description: prova
-      - name: Campaign responsiveness
-        description: prova			
-  - name: KPI_AssistenzaStradale
-    description: Lo creo vuoto solo da esempio
-  - name: KPI_Qlik
-    description: Lo creo vuoto solo da esempio    
+        term_source: "EXTERNAL"
+        source_ref: FIBO
+        source_url: "https://spec.edmcouncil.org/fibo/ontology/FBC/ProductsAndServices/ClientsAndAccounts/Account"
+      - name: CampaignResponsiveness
+        description: prova
+
+      - name: KPI_AssistenzaStradale
+        description: aggiungo vuoto
+        term_source: "EXTERNAL"
+        source_ref: FIBO
+        knowledge_links:
+          - url: "https://telepass.atlassian.net/wiki/spaces/DAM/pages/2625896464/RA+-+ROADSIDE+ASSISTANCE"
+            label: Link alla documentazione Assistenza Stradale
+
+      - name: KPI_Qlik
+        description: aggiungo vuoto
+        knowledge_links:
+          - url: "https://telepass.atlassian.net/wiki/spaces/DAM/pages/2673869372/BI+ANALYTICS"
+            label: Link alla docu di BI
