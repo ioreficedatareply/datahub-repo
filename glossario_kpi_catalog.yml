@@ -37,16 +37,15 @@ nodes:
         source_url: "https://spec.edmcouncil.org/fibo/ontology/FBC/ProductsAndServices/ClientsAndAccounts/Account"
       - name: CampaignResponsiveness
         description: prova
-  - name: KPI_AssistenzaStradale
-      description: aggiungo vuoto
-      term_source: "EXTERNAL"
-      source_ref: FIBO
-      knowledge_links:
-        - url: "https://telepass.atlassian.net/wiki/spaces/DAM/pages/2625896464/RA+-+ROADSIDE+ASSISTANCE"
-          label: Link alla documentazione Assistenza Stradale
-
   - name: KPI_Qlik
-     description: aggiungo vuoto
-     knowledge_links:
-        - url: "https://telepass.atlassian.net/wiki/spaces/DAM/pages/2673869372/BI+ANALYTICS"
-          label: Link alla docu di BI
+    description: Creo vuoto
+    knowledge_links:
+      - label: Link alla docu di Team BI
+        url: "https://telepass.atlassian.net/wiki/spaces/DAM/pages/2673869372/BI+ANALYTICS"
+      
+
+  - name: KPI_AssistenzaStradale
+    description: Creo Vuoto    
+    knowledge_links:
+      - label: Link alla pagina di Assistenza Stradale
+        url: "https://telepass.atlassian.net/wiki/spaces/DAM/pages/2625896464/RA+-+ROADSIDE+ASSISTANCE"
