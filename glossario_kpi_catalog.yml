@@ -7,11 +7,13 @@ url: "https://github.com/datahub-project/datahub/"
 nodes:
   - name: KPI_Catalog
     description: Prova di KPI Catalog con le categorie 
-	source_url: "https://telepass.atlassian.net/wiki/spaces/DAM/pages/2724069398/UCV+-+Documentazione+Funzionale#Analisi-funzionale"
-      groups:
-        - finance
-	  owners:
-		- owner di prova
+    knowledge_links:
+      - label: Link alla docu di UCV
+        url: "https://telepass.atlassian.net/wiki/spaces/DAM/pages/2724069398/UCV+-+Documentazione+Funzionale#Analisi-funzionale"
+    groups:
+      - finance
+    owners:
+      - owner di prova
     terms:
       - name: Anagrafica clienti
         description: Il KPI in questione contiene informazioni di natura anagrafica
