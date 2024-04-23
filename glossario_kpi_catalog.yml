@@ -1,57 +1,93 @@
 version: 1
 source: DataHub
 owners:
-  users:
-    - telepass
-url: "https://telepass.atlassian.net/wiki/spaces/DAM/pages/2674622691/DATA+PLATFORM"
+  groups:
+    - dataplatform
+url: "https://github.com/datahub-project/datahub/"
 nodes:
-  - name: KPI_Catalog
-    description: Prova di KPI Catalog con le categorie 
-    owners:
-      users:
-        - telepass_dataplatform
-      groups:
-        - Data Engineer team
-    knowledge_links:
-      - label: Link alla documentazione UCV 
-        url: "https://telepass.atlassian.net/wiki/spaces/DAM/pages/2724069398/UCV+-+Documentazione+Funzionale#Analisi-funzionale"
-    terms:
-      - name: AnagraficaClienti
-        description: Il KPI in questione contiene informazioni di natura anagrafica
-        related_terms:
-          - KPI_Catalog.InfoContrattuali
-      - name: InfoContrattuali
-        description: prova
-      - name: InfoComportamentali
-        description: prova
-      - name: AnalisiPredittive
-        description: prova
-      - name: InfoDigitali
-        description: prova
-      - name: CustomerCare
-        description: prova
-      - name: InfoAssicurative
-        description: prova
-        term_source: "EXTERNAL"
-        source_ref: FIBO
-        source_url: "https://spec.edmcouncil.org/fibo/ontology/FBC/ProductsAndServices/ClientsAndAccounts/Account"
-      - name: CampaignResponsiveness
-        description: prova
   - name: KPI_Qlik
-    description: Creo vuoto
+    description: KPI Qlik
     knowledge_links:
-      - label: Link alla docu di Team BI
-        url: "https://telepass.atlassian.net/wiki/spaces/DAM/pages/2673869372/BI+ANALYTICS"
+      - label: Link alla documentazione Qlik
+        url: "https://telepass.atlassian.net/wiki/spaces/DAM/pages/2673869372"
     terms:
       - name: KPI_Qlik
-        description: prova
-      
-
+        description: KPI Qlik
   - name: KPI_AssistenzaStradale
-    description: Creo Vuoto    
+    description: KPI Assistenza Stradale
     knowledge_links:
-      - label: Link alla pagina di Assistenza Stradale
+      - label: Link alla documentazione Assistenza Stradale
         url: "https://telepass.atlassian.net/wiki/spaces/DAM/pages/2625896464/RA+-+ROADSIDE+ASSISTANCE"
+    owners:
+      users:
+        - g.sarti
+      group:
+        - dataplatform
     terms:
       - name: KPI_AssistenzaStradale
-        description: prova
+        description: KPI Assistenza Stradale
+  - name: KPI_Abbonamenti
+    description: KPI Abbonamenti
+    knowledge_links:
+      - label: Link alla documentazione Abbonamenti
+        url: "https://telepass.atlassian.net/wiki/spaces/DAM/pages/2688122916/APP+ABBONAMENTI"
+    owners:
+      users:
+        - g.sammaritani
+      group:
+        - dataplatform
+    terms:
+      - name: KPI_Abbonamenti
+        description: KPI Abbonamenti
+  - name: KPI_Catalog
+    description: Catalogo dei KPI UCV
+    knowledge_links:
+      - label: Link alla documentazione UCV
+        url: "https://telepass.atlassian.net/wiki/spaces/DAM/pages/2674196777/UCV"
+    owners:
+      users:
+        - a.colace
+        - iv.orefice
+      groups:
+        - dataplatform
+    nodes:
+      - name: AnagraficaClienti
+        description: "KPI inerenti alla storia anagrafica del cliente"
+        terms:
+          - name: Red
+            description: "red color"
+            term_source: "EXTERNAL"
+            source_ref: FIBO
+            source_url: "https://spec.edmcouncil.org/fibo/ontology/FBC/ProductsAndServices/ClientsAndAccounts/Account"
+
+          - name: Green
+            description: "green color"
+            term_source: "EXTERNAL"
+            source_ref: FIBO
+            source_url: "https://spec.edmcouncil.org/fibo/ontology/FBC/ProductsAndServices/ClientsAndAccounts/Account"
+      - name: InfoContrattuali
+        description: "KPI inerenti alle informazioni contrattuali del cliente"
+        terms:
+          - name: Red
+            description: "red color"
+            term_source: "EXTERNAL"
+            source_ref: FIBO
+            source_url: "https://spec.edmcouncil.org/fibo/ontology/FBC/ProductsAndServices/ClientsAndAccounts/Account"
+      - name: InfoComportamentali
+        description: "KPI inerenti alle informazioni comportamentali del cliente"
+
+      - name: AnalisiPredittive
+        description: "KPI relativi alle analisi predittive rispetto a comportamenti del cliente, come ad esempio churn, propensione ad upselling etc."
+
+      - name: InfoDigitali
+        description: "KPI inerenti alle informazioni digitali del cliente"
+
+      - name: CustomerCare
+        description: "KPI CustomerCare"
+
+      - name: InfoAssicurative
+        description: "KPI inerenti alle informazioni assicurative del cliente"
+
+      - name: CampaignResponsiveness
+        description: "KPI inerenti a come il cliente risponde alle campagne proposte"
+
