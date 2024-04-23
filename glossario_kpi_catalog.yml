@@ -54,25 +54,59 @@ nodes:
       - name: AnagraficaClienti
         description: "KPI inerenti alla storia anagrafica del cliente"
         terms:
-          - name: Red
-            description: "red color"
-            term_source: "EXTERNAL"
-            source_ref: FIBO
-            source_url: "https://spec.edmcouncil.org/fibo/ontology/FBC/ProductsAndServices/ClientsAndAccounts/Account"
+          - name: is_telepass_employee
+            source_url: "https://telepass.atlassian.net/wiki/spaces/DAM/pages/2674196777/UCV"
+            owner:
+              - none
+            custom_properties: 
+              - dataset: published_kpi
+              - table: UCV
+              - KPI_description: "Flag che indica se il cliente è un dipendente Telepass"
+              - KPI_implementation_logic: "Il flag viene settato su true se il cliente è un dipendente telepass (in altre parole, presenta il flag is_app4us, campo presente nella masterdata CONTRACTS, valorizzato a TRUE)"
+              - Data_Steward: none
+              - Destination_Of_Use: none
+              - Original_Terms: none
+              - Related_KPI: none
+              - Acronym_Synonims: none
+              - Insert_Date: "21/12/2023"
+              - Last_Update_Date: "21/12/2023"
 
-          - name: Green
-            description: "green color"
-            term_source: "EXTERNAL"
-            source_ref: FIBO
-            source_url: "https://spec.edmcouncil.org/fibo/ontology/FBC/ProductsAndServices/ClientsAndAccounts/Account"
+          - name: main_consumer_contract_type_code
+            source_url: "https://telepass.atlassian.net/wiki/spaces/DAM/pages/2674196777/UCV"
+            owner:
+              - none
+            custom_properties: 
+              - dataset: published_kpi
+              - table: UCV
+              - KPI_description: "Codice della classificazione del cliente consumer su base contrattuale"
+              - KPI_implementation_logic: "Per ogni cliente e contratto attivo (contract_state_code) viene selezionato il codice della tipologia di contratto con gerarchia più alta secondo un ordine definito sul campo product_code: FP, FC, FE, FF, FB, FA, PU, PP, EB, TR. Ciò significa che, in caso di multicontratto, il cliente sarà classificato per mezzo del contratto più alto nella scala gerarchica."
+              - Data_Steward: none
+              - Destination_Of_Use: none
+              - Original_Terms: none
+              - Related_KPI: "main_consumer_contract_type"
+              - Acronym_Synonims: none
+              - Insert_Date: "21/12/2023"
+              - Last_Update_Date: "21/12/2023"
       - name: InfoContrattuali
         description: "KPI inerenti alle informazioni contrattuali del cliente"
         terms:
-          - name: Red
-            description: "red color"
-            term_source: "EXTERNAL"
-            source_ref: FIBO
-            source_url: "https://spec.edmcouncil.org/fibo/ontology/FBC/ProductsAndServices/ClientsAndAccounts/Account"
+          - name: num_european_devices
+            source_url: "https://telepass.atlassian.net/wiki/spaces/DAM/pages/2674196777/UCV"
+            owner:
+              - none
+            custom_properties: 
+              - dataset: published_kpi
+              - table: UCV
+              - KPI_description: "Numero di apparati europei associati al cliente"
+              - KPI_implementation_logic: "Per ogni cliente viene calcolato il totale degli apparati europei posseduti dal cliente: conta in DISTINCT tutti gli apparati posseduti dal cliente, sommando il numero dei device autorizzati, ma solo se l'apparato è EUROPEO. Per fare ciò, si valutano tutti i titoli attivi (campo is_title_active) e il tipo del titolo (campo title_type). Se il tipo titolo è valorizzato come 'Telepass Europeo', allora questo corrisponde a +1 nel conteggio del KPI."
+              - Data_Steward: none
+              - Destination_Of_Use: none
+              - Original_Terms: none
+              - Related_KPI: none
+              - Acronym_Synonims: none
+              - Insert_Date: "21/12/2023"
+              - Last_Update_Date: "21/12/2023"
+
       - name: InfoComportamentali
         description: "KPI inerenti alle informazioni comportamentali del cliente"
 
