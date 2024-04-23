@@ -55,8 +55,7 @@ nodes:
             source_url: "https://telepass.atlassian.net/wiki/spaces/DAM/pages/2674196777/UCV"
 
             custom_properties: 
-              - dataset: 
-                  published_kpi
+              - "dataset": "published_kpi"
 
 
           - name: main_consumer_contract_type_code
