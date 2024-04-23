@@ -54,8 +54,8 @@ nodes:
             description: Flag che indica se il cliente è un dipendente Telepass
             source_url: "https://telepass.atlassian.net/wiki/spaces/DAM/pages/2674196777/UCV"
 
-            custom_properties: 
-              - "dataset": "published_kpi"
+            custom_properties:                                                        # (optional) a map of key/value pairs of arbitrary custom properties
+              - is_used_for_compliance_tracking: true
 
 
           - name: main_consumer_contract_type_code
