@@ -1,5 +1,8 @@
 version: 1
 source: DataHub
+owners:                                                 # owners contains two nested fields
+  groups:                                               # (optional) a list of group IDs
+    - dataplatform
 url: "https://github.com/datahub-project/datahub/"
 nodes:
   - name: KPI_Qlik
@@ -18,8 +21,6 @@ nodes:
     owners:
       users:
         - g.sarti
-      group:
-        - dataplatform
     terms:
       - name: KPI_AssistenzaStradale
         description: KPI Assistenza Stradale
@@ -31,8 +32,6 @@ nodes:
     owners:
       users:
         - g.sammaritani
-      group:
-        - dataplatform
     terms:
       - name: KPI_Abbonamenti
         description: KPI Abbonamenti
@@ -49,12 +48,11 @@ nodes:
         - dataplatform
     nodes:
       - name: AnagraficaClienti
-        description: "KPI inerenti alla storia anagrafica del cliente"
+        description: KPI inerenti alla storia anagrafica del cliente
         terms:
           - name: is_telepass_employee
             source_url: "https://telepass.atlassian.net/wiki/spaces/DAM/pages/2674196777/UCV"
-            owner:
-              - none
+
             custom_properties: 
               - dataset: published_kpi
               - table: UCV
@@ -70,8 +68,7 @@ nodes:
 
           - name: main_consumer_contract_type_code
             source_url: "https://telepass.atlassian.net/wiki/spaces/DAM/pages/2674196777/UCV"
-            owner:
-              - none
+
             custom_properties: 
               - dataset: published_kpi
               - table: UCV
@@ -85,12 +82,11 @@ nodes:
               - Insert_Date: "21/12/2023"
               - Last_Update_Date: "21/12/2023"
       - name: InfoContrattuali
-        description: "KPI inerenti alle informazioni contrattuali del cliente"
+        description: KPI inerenti alle informazioni contrattuali del cliente
         terms:
           - name: num_european_devices
             source_url: "https://telepass.atlassian.net/wiki/spaces/DAM/pages/2674196777/UCV"
-            owner:
-              - none
+
             custom_properties: 
               - dataset: published_kpi
               - table: UCV
@@ -105,20 +101,20 @@ nodes:
               - Last_Update_Date: "21/12/2023"
 
       - name: InfoComportamentali
-        description: "KPI inerenti alle informazioni comportamentali del cliente"
+        description: KPI inerenti alle informazioni comportamentali del cliente
 
       - name: AnalisiPredittive
-        description: "KPI relativi alle analisi predittive rispetto a comportamenti del cliente, come ad esempio churn, propensione ad upselling etc."
+        description: KPI relativi alle analisi predittive rispetto a comportamenti del cliente, come ad esempio churn, propensione ad upselling etc.
 
       - name: InfoDigitali
-        description: "KPI inerenti alle informazioni digitali del cliente"
+        description: KPI inerenti alle informazioni digitali del cliente
 
       - name: CustomerCare
-        description: "KPI CustomerCare"
+        description: KPI CustomerCare
 
       - name: InfoAssicurative
-        description: "KPI inerenti alle informazioni assicurative del cliente"
+        description: KPI inerenti alle informazioni assicurative del cliente
 
       - name: CampaignResponsiveness
-        description: "KPI inerenti a come il cliente risponde alle campagne proposte"
+        description: KPI inerenti a come il cliente risponde alle campagne proposte
 
