@@ -56,16 +56,7 @@ nodes:
 
             custom_properties: 
               - dataset: published_kpi
-              - table: UCV
-              - KPI_description: "Flag che indica se il cliente è un dipendente Telepass"
-              - KPI_implementation_logic: "Il flag viene settato su true se il cliente è un dipendente telepass (in altre parole, presenta il flag is_app4us, campo presente nella masterdata CONTRACTS, valorizzato a TRUE)"
-              - Data_Steward: none
-              - Destination_Of_Use: none
-              - Original_Terms: none
-              - Related_KPI: none
-              - Acronym_Synonims: none
-              - Insert_Date: "21/12/2023"
-              - Last_Update_Date: "21/12/2023"
+
 
           - name: main_consumer_contract_type_code
             description: Codice della classificazione del cliente consumer su base contrattuale
