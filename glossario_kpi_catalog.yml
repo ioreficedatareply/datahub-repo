@@ -1,8 +1,10 @@
 version: 1
 source: DataHub
-owners:
-  groups:
-    - dataplatform
+owners:                                                                   # (optional) owners contains 2 nested fields
+   users:                                                                  # (optional) a list of user IDs
+     - dataplatform
+   groups: 
+     - dataplatform
 url: "https://github.com/datahub-project/datahub/"
 nodes:
   - name: KPI_Qlik
