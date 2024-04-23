@@ -1,0 +1,5 @@
+resource,subresource,glossary_terms,tags,owners,ownership_type,description,domain,ownership_type_urn
+"urn:li:dataset:(urn:li:dataPlatform:athena,default.ucv_sample,PROD)",,,[urn:li:tag:KPI|urn:li:tag:UCV|urn:li:tag:UnifiedCustomerView|urn:li:tag:CLIENTE|urn:li:tag:CLIENTI|urn:li:tag:INDICATORI|urn:li:tag:CONSUMER],,,"Link alla documentazione UCV https://telepass.atlassian.net/wiki/spaces/DAM/pages/2674196777/UCV",,
+"urn:li:dataset:(urn:li:dataPlatform:athena,default.ucv_sample,PROD)",num_european_devices,[urn:li:glossaryTerm:InfoContrattuali],,,,"Numero di apparati europei associati al cliente",
+"urn:li:dataset:(urn:li:dataPlatform:athena,default.ucv_sample,PROD)",is_telepass_employee,[urn:li:glossaryTerm:AnagraficaClienti],,,,"Flag che indica se il cliente è un dipendente Telepass",
+"urn:li:dataset:(urn:li:dataPlatform:athena,default.ucv_sample,PROD)",main_consumer_contract_type_code,[urn:li:glossaryTerm:AnagraficaClienti],,,,"Codice della classificazione del cliente consumer su base contrattuale",
