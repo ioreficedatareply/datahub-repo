@@ -51,6 +51,7 @@ nodes:
         description: KPI inerenti alla storia anagrafica del cliente
         terms:
           - name: is_telepass_employee
+            description: Flag che indica se il cliente è un dipendente Telepass
             source_url: "https://telepass.atlassian.net/wiki/spaces/DAM/pages/2674196777/UCV"
 
             custom_properties: 
@@ -67,6 +68,7 @@ nodes:
               - Last_Update_Date: "21/12/2023"
 
           - name: main_consumer_contract_type_code
+            description: Codice della classificazione del cliente consumer su base contrattuale
             source_url: "https://telepass.atlassian.net/wiki/spaces/DAM/pages/2674196777/UCV"
 
             custom_properties: 
@@ -85,6 +87,7 @@ nodes:
         description: KPI inerenti alle informazioni contrattuali del cliente
         terms:
           - name: num_european_devices
+            description: Numero di apparati europei associati al cliente
             source_url: "https://telepass.atlassian.net/wiki/spaces/DAM/pages/2674196777/UCV"
 
             custom_properties: 
